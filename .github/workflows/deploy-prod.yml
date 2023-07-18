@@ -1,6 +1,12 @@
 name: Deploy-Prod
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+        sha:
+          description: 'Commit ID'
+          required: true
+          type: string
 
 jobs:
   build:
